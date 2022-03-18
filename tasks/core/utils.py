@@ -70,7 +70,7 @@ def substitute(ctx, params):
     build_path = os.path.join(os.getcwd(), build_path)
 
     command = ('grep -rl '
-                '"{{%s}}" %s')
+                '"{{%s}}" "%s"')
     
     for key, value in substs.items():
         res = ctx.run(
